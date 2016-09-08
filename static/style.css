@@ -10,6 +10,9 @@ h1 {
     font-family: 'Lobster', cursive;
     font-size: 48px;
 }
+h2 {
+    font-size: 20px;
+}
 .btn {
     padding:12px 24px;
 }
@@ -37,6 +40,9 @@ h1 {
     -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
+}
+.start-description {
+    margin: 10px 0 20px 0;
 }
 .quiz-panel {
     text-align: center;

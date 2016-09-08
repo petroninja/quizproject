@@ -14,17 +14,16 @@
 	<body>
 		<div class="container">
 			<div class="page-header">
-			<h1 class="text-center">The epic programmer quiz</h1>
+			<h1 class="text-center">{{ quiz.name }}</h1>
 			</div>
-			<p class="lead text-center">Your results are in!</p>
+			<p class="lead text-center">..:: {{ correct }} av {{ total }} rätt ::..</p>
 
 		    <div class="row quiz-panel">
 		     	<div class="col-md-12">
 		     		<div>
 		     			<img src="/static/res/quiz-results.gif" class="quiz-picture">
 		        		<div class="quiz-text">
-		        			<p>Du fick det här resultatet... yadayada yadayada.
-							</p>
+		        			<p>Du är klar med quizfrågorna och fick {{ correct }} av {{ total }} svar rätt. Är du nöjd med resultatet?</p>
 						</div>
 						<a href="quiz.html" class="btn btn-primary" title="Starta quizet">Gör quizet igen »</a>
 					</div>
