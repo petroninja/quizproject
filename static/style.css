@@ -1,0 +1,52 @@
+body {
+    background:#00ffcc;
+    background-image: url("res/bg.png");
+}
+.container {
+    background: #fff;
+    padding:0 20px 80px 20px;
+}
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+}
+.btn {
+    padding:12px 24px;
+}
+.start-panel {
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.start-panel > div > div{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+.start-panel > div:hover > div{
+    margin-top: -10px;
+    border: 1px solid rgb(200, 200, 200);
+    background: rgba(200, 200, 200, 0.1);
+    transition: 0.3s;
+}
+.start-panel > div:hover img {
+    border-radius: 50%;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.quiz-panel {
+    text-align: center;
+    padding: 10px;
+}
+.quiz-picture {
+    margin: 0 0 15px 0;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+.quiz-text {
+    margin:20px 0 40px 0;
+}
