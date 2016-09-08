@@ -22,9 +22,9 @@
 				<div class="col-md-4">
 					<div>
 		    			<img src="/static/res/icon-2.png" alt="" class="img-circle img-thumbnail">
-						<h2>{{ quiz.name }}</h2>
+						<h2><a href="{% url 'quiz_page' quiz.quiz_number %}">{{ quiz.name }}</a></h2>
 						<p class="start-description">{{ quiz.description }}</p>
-		          		<a href="quiz" class="btn btn-primary" title="Öppna quizet">Go »</a>
+		          		<a href="{% url 'quiz_page' quiz.quiz_number %}" class="btn btn-primary" title="Välj quizet">Välj »</a>
 					</div>
 				</div>
 				{% endfor %}

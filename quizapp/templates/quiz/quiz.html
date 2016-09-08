@@ -17,7 +17,6 @@
 			<h1 class="text-center">{{ quiz.name }}</h1>
 			</div>
 			<p class="lead text-center">{{ quiz.description }}</p>
-
 		    <div class="row quiz-panel">
 		     	<div class="col-md-12">
 		     		<div>
@@ -26,7 +25,7 @@
 		        			<p>Lorem ipsum dolor sit amet.
 							</p>
 						</div>
-						<a href="question.html" class="btn btn-primary" title="Starta quizet">Starta quizet »</a>
+						<a href="{% url 'question_page' quiz_number 1 %}" class="btn btn-primary" title="Starta quizet">Starta quizet »</a>
 					</div>
 				</div>
 		    </div>
