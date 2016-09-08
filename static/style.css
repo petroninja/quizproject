@@ -4,7 +4,7 @@ body {
 }
 .container {
     background: #fff;
-    padding:0 20px 80px 20px;
+    padding:0 60px 60px 60px;
 }
 h1 {
     font-family: 'Lobster', cursive;
@@ -18,12 +18,13 @@ h1 {
     text-align: center;
 }
 .start-panel > div > div{
-    padding: 10px;
+    padding: 20px 20px 36px 20px;
     border: 1px solid transparent;
     border-radius: 4px;
     transition: 0.2s;
 }
-.start-panel > div:hover > div{
+
+.start-panel > div:hover > div {
     margin-top: -10px;
     border: 1px solid rgb(200, 200, 200);
     background: rgba(200, 200, 200, 0.1);
