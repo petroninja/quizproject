@@ -6,8 +6,8 @@
 		</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/static/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	</head>
@@ -17,33 +17,32 @@
 			<h1 class="text-center">{{ quiz.name }}</h1>
 			</div>
 			<p class="lead text-center">{{ question_number }}. {{ question }}</p>
-
-		    <div class="row quiz-panel">
-		     	<div class="col-md-12">
-		     		<div>
-		     			<img src="/static/res/question-1.gif" class="quiz-picture">
-		        		<div class="quiz-text">
+			<div class="row quiz-panel">
+			 	<div class="col-md-12">
+		 			<img src="/static/res/quiz-1-question-2.gif">
+					<div class="quiz-text">
+						<div class="quiz-form">
 							<form>
 								<div class="radio">
-							    	<label><input type="radio">{{ answer1 }}</label>
-							    </div>
-							    <div class="radio">
-							    	<label><input type="radio">{{ answer2 }}</label>
-							  	</div>
-							  	<div class="radio">
-							    	<label><input type="radio">{{ answer3 }}</label>
-							  	</div>
+									<label><input type="radio" name="year" value="1" checked>{{ answer1 }}</label>
+								</div>
+								<div class="radio">
+									<label><input type="radio" name="year" value="2">{{ answer2 }}</label>
+								</div>
+								<div class="radio">
+									<label><input type="radio" name="year" value="3">{{ answer3 }}</label>
+								</div>
 							</form>
 						</div>
-						<a href="{% url 'results_page' quiz_number %}" class="btn btn-default" title="Gå vidare">Gå vidare »</a>
-						<!--<button type="submit" class="btn btn-default">Next question »</button>-->
 					</div>
+					<a href="{% url 'results_page' quiz_number %}" class="btn btn-default" title="Gå vidare">Gå vidare »</a>
+					<!--<button type="submit" class="btn btn-default">Next question »</button>-->
 				</div>
-		    </div>
+			</div>
 		</div>
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="/static/js/bootstrap.min.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/static/js/bootstrap.min.js"></script>
 	</body>
 </html>

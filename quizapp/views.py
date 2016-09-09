@@ -3,8 +3,8 @@ from django.shortcuts import render
 quizzes = [
 	{
 		"quiz_number": 1,
-   		"name": "Klassiska böcker",
-	   	"description": "Hur bra kan du dina klassiker?"
+   	    "name": "Programmerarhumor",
+	    "description": "Fattar du eller är du en noob?"	
 	},
 	{
 		"quiz_number": 2,
@@ -13,8 +13,9 @@ quizzes = [
 	},
 	{
 		"quiz_number": 3,
-   	    "name": "Världens mest kända hackare",
-	    "description": "Hackerhistoria är viktigt, kan du den?"	},
+   		"name": "Klassiska böcker",
+	   	"description": "Hur bra kan du dina klassiker?"
+	},
 ]
 
 # Create your views here.
@@ -35,10 +36,10 @@ def question(request, quiz_number, question_number):
 	context = {
 		"quiz": quizzes[int(quiz_number) - 1],
 		"question_number": question_number,
-	    "question": "Hur många bultar har ölandsbron?",
-		"answer1": "12",
-	   	"answer2": "66 400",
-	    "answer3": "7 428 954",
+	    "question": "Why do Java programmers need glasses?",
+		"answer1": "Because they don’t C++",
+	   	"answer2": "Because they don’t C#",
+	    "answer3": "I have absolutely no clue",
 	    "quiz_number": quiz_number,
 	}
 	return render(request, "quiz/question.html", context)

@@ -6,33 +6,31 @@
 		</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/static/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	</head>
 	<body>
 		<div class="container">
 			<div class="page-header">
-				<h1 class="text-center">Testa ett quiz yo</h1>
+				<h1 class="text-center">Välj ett quiz</h1>
 			</div>
-			<p class="lead text-center">Här kan du välja vilket av alla festliga quiz du vill göra.</p>
+			<p class="lead text-center">Vilket ämne vill du utmana dig själv i?</p>
 			<div class="row start-panel">
 				{% for quiz in quizzes %}
 				<div class="col-md-4">
-					<div>
-		    			<img src="/static/res/icon-2.png" alt="" class="img-circle img-thumbnail">
+						<img src="/static/res/quiz-{{ quiz.quiz_number }}.png" alt="" class="img-circle img-thumbnail">
 						<h2><a href="{% url 'quiz_page' quiz.quiz_number %}">{{ quiz.name }}</a></h2>
 						<p class="start-description">{{ quiz.description }}</p>
-		          		<a href="{% url 'quiz_page' quiz.quiz_number %}" class="btn btn-primary" title="Välj quizet">Välj »</a>
-					</div>
+				  		<a href="{% url 'quiz_page' quiz.quiz_number %}" class="btn btn-primary" title="Välj quizet">Välj »</a>
 				</div>
 				{% endfor %}
-		    </div>
+			</div>
 		</div>
-    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="/static/js/bootstrap.min.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/static/js/bootstrap.min.js"></script>
 	</body>
 </html>
