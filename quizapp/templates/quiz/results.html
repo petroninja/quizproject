@@ -16,12 +16,12 @@
 			<div class="page-header">
 			<h1 class="text-center">{{ quiz.name }}</h1>
 			</div>
-			<p class="lead text-center">..:: {{ correct }} av {{ total }} rätt ::..</p>
+			<p class="lead text-center">¸¸.•*¨*•♫♪¸¸.• {{ correct }} av {{ total }} rätt •.¸¸♪♫•*¨*•.¸¸</p>
 			<div class="row quiz-panel">
 		 		<div class="col-md-12">
 		 			<img src="/static/res/quiz-results.gif">
 					<div class="quiz-text">
-						<p>Du är klar med quizfrågorna och fick {{ correct }} av {{ total }} svar rätt. Är du nöjd med resultatet?</p>
+						<p>Du är klar med frågorna och fick {{ correct }} av {{ total }} svar rätt. Är du nöjd med resultatet?</p>
 					</div>
 					<a href="{% url 'start_page' %}" class="btn btn-primary" title="Välj ett nytt quiz">Välj ett nytt quiz »</a>
 				</div>
