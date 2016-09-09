@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>
-			The epic programmer quiz
+			{{ quiz.name }}
 		</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
 			<p class="lead text-center">{{ quiz.description }}</p>
 			<div class="row quiz-panel">
 			 	<div class="col-md-12">
-		 			<img src="/static/res/quiz-1.gif">
+		 			<img src="/static/res/quiz-{{ quiz.quiz_number}}.gif">
 					<div class="quiz-text">
 						<p>Är du redo?</p>
 					</div>
