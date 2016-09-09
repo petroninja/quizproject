@@ -64,10 +64,9 @@ h2 {
     max-width: 422px;
 }
 .quiz-text {
-    margin:10px 0;
+    margin:10px 0 20px 0;
 }
 div.quiz-form {
     display: inline-block;
     text-align:left;
-    margin-bottom: 20px;
 }
