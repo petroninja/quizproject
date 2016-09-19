@@ -10,12 +10,14 @@ def start(request):
 	}
 	return render(request, "quiz/start.html", context)
 
+
 def quiz(request, quiz_number):
 	context = {
 		"quiz": Quiz.objects.get(quiz_number=quiz_number),
 		"quiz_number": quiz_number,
 	}
 	return render(request, "quiz/quiz.html", context)
+
 
 def question(request, quiz_number, question_number):
 	quiz = Quiz.objects.get(quiz_number=quiz_number)
@@ -33,6 +35,7 @@ def question(request, quiz_number, question_number):
 	}
 	return render(request, "quiz/question.html", context)
 
+
 def answer(request, quiz_number, question_number):
 	saved_answers = request.session.get(quiz_number, {})
 	answer = int(request.POST["answer"])
@@ -45,6 +48,7 @@ def answer(request, quiz_number, question_number):
 		return redirect("results_page", quiz_number)
 	else:
 		return redirect("question_page", quiz_number, question_number + 1)
+
 
 def results(request, quiz_number):
 	quiz = Quiz.objects.get(quiz_number=quiz_number)
